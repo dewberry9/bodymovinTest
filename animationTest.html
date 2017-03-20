@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bodymovin animation test</title>
+        <meta charset="UTF-8">
+        <script src="./bodymovin.js"></script>
+        <style>
+            body {
+                background-color: #ad4747;
+                text-align: center;
+            }
+            .code-list div {
+                width: 30vw;
+                display: inline-block;
+                color: #fff;
+            }
+        </style>
+    </head>
+<body>
+    <h1 style="color: #fff;">animationTest.html</h1>
+    <div class="code-list">
+        <div id="c-code">C</div>
+        <div id="cm-code">Cm</div>
+        <div id="c7-code">C7</div>
+    </div>
+    <script>
+        var animationC = {
+            path: 'c.json',
+            loop: true,
+            autoplay: true,
+            renderer: 'svg',
+            container: document.getElementById('c-code'),
+        };
+        var animationCm = {
+            path: 'cm.json',
+            loop: true,
+            autoplay: true,
+            renderer: 'svg',
+            container: document.getElementById('cm-code'),
+        };
+        var animationC7 = {
+            path: 'c7.json',
+            loop: true,
+            autoplay: true,
+            renderer: 'svg',
+            container: document.getElementById('c7-code'),
+        };
+        bodymovin.loadAnimation(animationC);
+        bodymovin.loadAnimation(animationCm);
+        bodymovin.loadAnimation(animationC7);
+    </script>
+    </body>
+</html>
